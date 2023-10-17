@@ -1,24 +1,36 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { Container, Nav, Navbar, } from "react-bootstrap";
 
 
-function Header(){
-    return(
-        <header>
-            <nav>
-                <ul className="menu">
-                    <li>
-                        <Link to="/">Inicial</Link> 
-                    </li>
-                    <li>
-                        <Link to="/contato">Contato</Link>
-                    </li>
-                    <li>
-                        <Link to="/sobre">Sobre</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+function Header() {
+    return (
+        <div className="menu">
+            <Navbar>
+                <Container>
+                    <Navbar.Brand>
+                        <Link to="/">Meu site</Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="menu-site" />
+                    <Navbar.Collapse id="menu-site">
+                        <Nav>
+                            <Nav.Item>
+                                <Link className="nav-link" to="/">Inicial</Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Link className="nav-link" to="/contato">Contato</Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Link className="nav-link" to="/sobre">Sobre</Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Link className="nav-link" to="/exercicio">Exercício</Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div>
     )
 }
 

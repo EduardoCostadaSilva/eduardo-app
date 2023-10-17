@@ -1,6 +1,11 @@
 .menu{
     display:flex;
-    justify-content: space-between;
+    justify-content: baseline;
     border:2px solid green;
     padding: 1%;
+    background-color: rgb(85, 245, 85);
+    list-style: none;
+    font-family: Arial;
+    font-size: 20px;
+
 }
